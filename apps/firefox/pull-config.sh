@@ -4,11 +4,11 @@ source "$(dirname $0)/constants.sh";
 
 echo "Pulling a new firefox syspref..."
 
-[[ `whoami` == "root" ]] && echo "pulling firefox config as root, probably not a good idea" && return 1;
+[[ `whoami` == "root" ]] && echo "pulling firefox config as root, probably not a good idea" && exit 1;
 
 if [[ !-d ]]; then
     (
-        mkdir -p $__PULL_STORE || ( echo "unable to create pull store" && return 1);
+        mkdir -p $__PULL_STORE || ( echo "unable to create pull store" && exit 1);
     )
 fi
 
