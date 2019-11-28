@@ -1,7 +1,8 @@
 #!/bin/sh
 
-__PULL_STORE="/rw/.pull";
-__REPO_STORE="/rw/git";
+source "$(dirname $0)/../constants.sh";
+
+__FIREFOX_STORE="${__PULL_STORE}/firefox"
 __REPO="${__REPO_STORE}/user.js";
 __REMOTE="https://github.com/pyllyukko/user.js.git";
 __MAKE_TARGET="systemwide_user.js";
